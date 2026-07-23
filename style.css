@@ -604,20 +604,19 @@ section { padding: 100px 24px; }
   transform: scale(1.05);
 }
 .projects-slider {
-  padding: 10px 0 50px;
+  padding: 10px 0 20px;
 }
-.swiper-pagination {
-  position: relative;
+.swiper-slide {
+  height: auto;
   margin-top: 20px;
 }
-.swiper-pagination-bullet {
-  background: var(--text-muted);
-  opacity: 1;
+.swiper-slide:nth-child(1),
+.swiper-slide:nth-child(2),
+.swiper-slide:nth-child(3) {
+  margin-top: 0;
 }
-.swiper-pagination-bullet-active {
-  background: var(--accent);
-  width: 24px;
-  border-radius: 4px;
+.swiper-pagination {
+  display: none !important;
 }
 .swiper-navigation {
   display: flex;

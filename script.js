@@ -176,10 +176,20 @@ function initProjects() {
 
     if (swiperInstance) swiperInstance.destroy(true, true);
     swiperInstance = new Swiper('.projects-slider', {
-      slidesPerView: 1, spaceBetween: 20,
-      pagination: { el: '.swiper-pagination', clickable: true },
+      slidesPerView: 1,
+      grid: { rows: 3, fill: 'row' },
+      spaceBetween: 20,
       navigation: { nextEl: '.swiper-next', prevEl: '.swiper-prev' },
-      breakpoints: { 640: { slidesPerView: 2 }, 968: { slidesPerView: 3 } },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          grid: { rows: 2, fill: 'row' }
+        },
+        1024: {
+          slidesPerView: 3,
+          grid: { rows: 2, fill: 'row' }
+        }
+      },
     });
   }
 
