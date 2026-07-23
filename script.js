@@ -22,20 +22,12 @@ const PROJECTS = [
   { title: 'Weather App', cat: 'websites', desc: 'Real-time weather forecast', url: 'https://weather-app-mocha-ten-90.vercel.app/', img: 'assets/projects/weather-app.jpg' },
   { title: 'AI Cinematic Visuals', cat: 'ai-videos', desc: 'High-quality cinematic AI generation with realistic lighting', video: 'lmw84az5fPw' },
   { title: 'AI Vertical Masterpiece', cat: 'ai-videos', desc: '9:16 aspect ratio AI video production', video: 'TYVWIOtTUnk' },
-  { title: 'AI Music Integration', cat: 'ai-videos', desc: 'AI models syncing with custom Sinhala audio', video: '27ZL5tISufM' },
   { title: 'AI Digital Avatar', cat: 'ai-videos', desc: 'Accurate face reference and digital costume rendering', video: 'uaIGsRAm1es' },
   { title: 'AI Elemental VFX', cat: 'ai-videos', desc: 'Realistic elemental transformations and dynamics', video: '16Njb-KPAEQ' },
   { title: 'Sri Lankan AI World', cat: 'ai-videos', desc: 'Futuristic AI concept set in Sri Lanka with motivational lip-sync', video: 'wpShdsMxCxU' },
   { title: 'AI Commercial Concept', cat: 'ai-videos', desc: 'Professional AI-powered video advertisement', video: 'cySILlPnw2k' },
   { title: 'Cinematic AI Scenes', cat: 'ai-videos', desc: 'Advanced camera angles and fluid AI motion', video: 'iWlLIxlh3BU' },
   { title: 'AI Studio Production', cat: 'ai-videos', desc: 'High-end AI studio setting generation', video: 'm6ji0uNSUyQ' },
-  { title: 'AI Short - Cinematic', cat: 'ai-videos', desc: 'Vertical 9:16 cinematic AI short story', video: 'lRSwXxuk1NI' },
-  { title: 'AI Short - Transformation', cat: 'ai-videos', desc: 'Quick dynamic AI VFX transformation', video: '4iItrw7ggFs' },
-  { title: 'AI Short - Vocal Sync', cat: 'ai-videos', desc: 'AI vocal and lip-sync integration short', video: '59uqRGE0ZEQ' },
-  { title: 'AI Short - Dynamic Motion', cat: 'ai-videos', desc: 'Fluid movement and AI avatar motion', video: 'VrdS7Cn4V4o' },
-  { title: 'AI Short - Concept Art', cat: 'ai-videos', desc: 'Creative and surreal AI visual concepts', video: '1gijfPV0kuk' },
-  { title: 'AI Short - Cyberpunk LK', cat: 'ai-videos', desc: 'Futuristic local environments in 9:16', video: 'gY8RcR5A5aQ' },
-  { title: 'AI Short - Motivation', cat: 'ai-videos', desc: 'AI lip-sync with motivational quotes', video: 'PoMuS2CWuyo' },
   { title: 'AI Cartoon Generation', cat: 'ai-videos', desc: 'AI-powered animated cartoon storytelling', video: 'AS3cY9hVwEY' },
   { title: 'Janaka Service & Garage', cat: 'ai-videos', desc: 'Veo 3 AI marketing video for garage center', video: 'v3AZBsSgEdI' },
   { title: 'AI Video Project 2', cat: 'ai-videos', desc: 'Advanced Veo 3 AI creation', video: 'vQDGBabQgR0' },
@@ -165,7 +157,7 @@ function initProjects() {
       const icon = isVideo ? 'fa-video' : 'fa-globe';
       const vid = p.video || '';
       const img = isVideo
-        ? `https://img.youtube.com/vi/${vid}/maxresdefault.jpg`
+        ? `https://img.youtube.com/vi/${vid}/hqdefault.jpg`
         : (p.url ? `https://s0.wp.com/mshots/v1/${encodeURIComponent(p.url)}?w=800&h=600` : `https://placehold.co/800x600/161b22/8b949e?text=${encodeURIComponent(p.title)}`);
       return `
         <div class="swiper-slide">
