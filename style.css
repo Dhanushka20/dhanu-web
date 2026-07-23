@@ -1280,3 +1280,9 @@ button:hover ~ .cursor-follower {
   .project-filters { gap: 6px; }
   .filter-btn { font-size: 11px; padding: 6px 14px; }
 }
+
+@media (max-width: 968px), (pointer: coarse) {
+  .cursor-follower {
+    display: none !important;
+  }
+}
