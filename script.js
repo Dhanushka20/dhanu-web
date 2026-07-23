@@ -147,7 +147,9 @@ function initProjects() {
       const isVideo = !!p.video;
       const icon = isVideo ? 'fa-video' : 'fa-globe';
       const vid = p.video || '';
-      const img = isVideo ? `https://img.youtube.com/vi/${vid}/maxresdefault.jpg` : (p.img ? p.img : `https://placehold.co/600x400/161b22/8b949e?text=${encodeURIComponent(p.title)}`);
+      const img = isVideo
+        ? `https://img.youtube.com/vi/${vid}/maxresdefault.jpg`
+        : (p.url ? `https://s0.wp.com/mshots/v1/${encodeURIComponent(p.url)}?w=800&h=600` : `https://placehold.co/800x600/161b22/8b949e?text=${encodeURIComponent(p.title)}`);
       return `
         <div class="swiper-slide">
           <div class="project-card" data-video="${vid}" data-url="${p.url || ''}" data-isvideo="${isVideo}">
