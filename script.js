@@ -35,6 +35,18 @@ const PROJECTS = [
   { title: 'AI Short - Dynamic Motion', cat: 'ai-videos', desc: 'Fluid movement and AI avatar motion', video: 'VrdS7Cn4V4o' },
   { title: 'AI Short - Concept Art', cat: 'ai-videos', desc: 'Creative and surreal AI visual concepts', video: '1gijfPV0kuk' },
   { title: 'AI Short - Cyberpunk LK', cat: 'ai-videos', desc: 'Futuristic local environments in 9:16', video: 'gY8RcR5A5aQ' },
+  { title: 'Janaka Service & Garage', cat: 'ai-videos', desc: 'Veo 3 AI marketing video for garage center', video: 'v3AZBsSgEdI' },
+  { title: 'AI Video Project 2', cat: 'ai-videos', desc: 'Advanced Veo 3 AI creation', video: 'vQDGBabQgR0' },
+  { title: 'AI Video Project 3', cat: 'ai-videos', desc: 'Professional Veo 3 AI showcase', video: 'Xf8jnc7QaU8' },
+  { title: 'AI Commercial Ad #1', cat: 'ai-videos', desc: 'AI-generated commercial advertisement', video: 'Sfk5YpA3-2I' },
+  { title: 'AI Commercial Ad #2', cat: 'ai-videos', desc: 'AI-powered commercial video', video: 'T4tglCdaYQ8' },
+  { title: 'AI Commercial Ad #3', cat: 'ai-videos', desc: 'Advanced AI commercial content', video: 'H_qhBRKAxoo' },
+  { title: 'AI Video Creation #4', cat: 'ai-videos', desc: 'AI-powered video generation', video: '9XXxj6h3gyY' },
+  { title: 'AI Video Creation #5', cat: 'ai-videos', desc: 'Intelligent content generation', video: 'tWcevoar9ZQ' },
+  { title: 'AI Video Creation #6', cat: 'ai-videos', desc: 'Automated video production', video: 'fYp3WTle6bQ' },
+  { title: 'AI Video Creation #7', cat: 'ai-videos', desc: 'Sophisticated AI video tools', video: 'xryTGjJgIWg' },
+  { title: 'AI Video Creation #8', cat: 'ai-videos', desc: 'Advanced AI-powered creation', video: 'hlnRaZVRw2M' },
+  { title: 'AI Video Creation #9', cat: 'ai-videos', desc: 'Cutting-edge AI video', video: 'HbLPa0E3UPg' },
 ];
 
 
