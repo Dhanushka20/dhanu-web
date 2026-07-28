@@ -949,15 +949,16 @@ section { padding: 100px 24px; }
 .training-media-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 .training-media {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
   background: #0d0d0d;
   border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .coming-soon-placeholder {
   width: 100%;
