@@ -946,6 +946,12 @@ section { padding: 100px 24px; }
   transform: translateY(-4px);
   box-shadow: 0 10px 40px rgba(0, 217, 255, 0.05);
 }
+.training-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .training-media {
   width: 100%;
   aspect-ratio: 16 / 9;

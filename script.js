@@ -59,9 +59,7 @@ const SESSION_IMAGES = [
   'WhatsApp Image 2026-07-28 at 20.39.38.jpeg',
   'WhatsApp Image 2026-07-28 at 20.43.18 (1).jpeg',
   'WhatsApp Image 2026-07-28 at 20.43.18.jpeg',
-  'WhatsApp Image 2026-07-28 at 20.43.19 (1).jpeg',
   'WhatsApp Image 2026-07-28 at 20.43.19.jpeg',
-  'WhatsApp Image 2026-07-28 at 20.43.21.jpeg',
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
