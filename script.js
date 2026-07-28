@@ -50,6 +50,20 @@ const PROJECTS = [
 ];
 
 
+const SESSION_IMAGES = [
+  'WhatsApp Image 2026-07-28 at 20.39.35.jpeg',
+  'WhatsApp Image 2026-07-28 at 20.39.36 (1).jpeg',
+  'WhatsApp Image 2026-07-28 at 20.39.36 (2).jpeg',
+  'WhatsApp Image 2026-07-28 at 20.39.37.jpeg',
+  'WhatsApp Image 2026-07-28 at 20.39.38 (1).jpeg',
+  'WhatsApp Image 2026-07-28 at 20.39.38.jpeg',
+  'WhatsApp Image 2026-07-28 at 20.43.18 (1).jpeg',
+  'WhatsApp Image 2026-07-28 at 20.43.18.jpeg',
+  'WhatsApp Image 2026-07-28 at 20.43.19 (1).jpeg',
+  'WhatsApp Image 2026-07-28 at 20.43.19.jpeg',
+  'WhatsApp Image 2026-07-28 at 20.43.21.jpeg',
+];
+
 document.addEventListener('DOMContentLoaded', () => {
   initPreloader();
   initNavigation();
@@ -62,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initCursorFollower();
   initSmoothScroll();
+  initTrainingGallery();
 });
 
 function initPreloader() {
@@ -308,5 +323,55 @@ function initSmoothScroll() {
         window.scrollTo({ top, behavior: 'smooth' });
       }
     });
+  });
+}
+
+function initTrainingGallery() {
+  const gallery = document.getElementById('imbulanaGallery');
+  if (!gallery) return;
+
+  gallery.innerHTML = SESSION_IMAGES.map((img, i) =>
+    `<div class="gallery-thumb" onclick="openGalleryModal(${i})">
+      <img src="assets/session/${encodeURI(img)}" alt="Imbulana Session ${i + 1}" loading="lazy" />
+    </div>`
+  ).join('');
+
+  const lightbox = document.createElement('div');
+  lightbox.id = 'galleryLightbox';
+  lightbox.className = 'gallery-lightbox';
+  lightbox.innerHTML = `
+    <div class="gallery-overlay" onclick="closeGalleryModal()"></div>
+    <div class="gallery-modal">
+      <button class="gallery-nav gallery-prev" onclick="changeGallery(-1)"><i class="fas fa-chevron-left"></i></button>
+      <img id="galleryFullImg" src="" alt="" />
+      <button class="gallery-nav gallery-next" onclick="changeGallery(1)"><i class="fas fa-chevron-right"></i></button>
+      <button class="gallery-close" onclick="closeGalleryModal()"><i class="fas fa-times"></i></button>
+      <div class="gallery-counter" id="galleryCounter"></div>
+    </div>`;
+  document.body.appendChild(lightbox);
+
+  window.galleryIdx = 0;
+  window.openGalleryModal = (idx) => {
+    window.galleryIdx = idx;
+    document.getElementById('galleryFullImg').src = `assets/session/${encodeURI(SESSION_IMAGES[idx])}`;
+    document.getElementById('galleryCounter').textContent = `${idx + 1} / ${SESSION_IMAGES.length}`;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+  window.closeGalleryModal = () => {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+  window.changeGallery = (dir) => {
+    let next = window.galleryIdx + dir;
+    if (next < 0) next = SESSION_IMAGES.length - 1;
+    if (next >= SESSION_IMAGES.length) next = 0;
+    window.openGalleryModal(next);
+  };
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeGalleryModal();
+    if (e.key === 'ArrowLeft') changeGallery(-1);
+    if (e.key === 'ArrowRight') changeGallery(1);
   });
 }
