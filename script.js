@@ -267,9 +267,9 @@ function initContactForm() {
     const email = document.getElementById('formEmail').value;
     const subject = document.getElementById('formSubject').value;
     const message = document.getElementById('formMessage').value;
-    const mailto = `mailto:mdlakruwan2020@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message)}`;
-    window.location.href = mailto;
-    status.textContent = '✓ Redirecting to your email client...';
+    const whatsappMsg = `*New Contact Form Submission*\n\n*Name:* ${name}\n*Email:* ${email}\n*Subject:* ${subject}\n*Message:* ${message}`;
+    window.open(`https://wa.me/94724380542?text=${encodeURIComponent(whatsappMsg)}`, '_blank');
+    status.textContent = '✓ Opening WhatsApp...';
     status.style.color = 'var(--green)';
   });
 }
