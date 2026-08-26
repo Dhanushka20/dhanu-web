@@ -35,6 +35,7 @@ const PROJECTS = [
   { title: 'AI Short - Dynamic Motion', cat: 'ai-videos', desc: 'Fluid movement and AI avatar motion', video: 'VrdS7Cn4V4o' },
   { title: 'AI Short - Concept Art', cat: 'ai-videos', desc: 'Creative and surreal AI visual concepts', video: '1gijfPV0kuk' },
   { title: 'AI Short - Cyberpunk LK', cat: 'ai-videos', desc: 'Futuristic local environments in 9:16', video: 'gY8RcR5A5aQ' },
+  { title: 'AI Short - Latest Creation', cat: 'ai-videos', desc: 'Latest AI-powered short creation', video: 'IbUBRw1Zkdo' },
   { title: 'Janaka Service & Garage', cat: 'ai-videos', desc: 'Veo 3 AI marketing video for garage center', video: 'v3AZBsSgEdI' },
   { title: 'AI Video Project 2', cat: 'ai-videos', desc: 'Advanced Veo 3 AI creation', video: 'vQDGBabQgR0' },
   { title: 'AI Video Project 3', cat: 'ai-videos', desc: 'Professional Veo 3 AI showcase', video: 'Xf8jnc7QaU8' },
