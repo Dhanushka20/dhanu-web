@@ -127,7 +127,7 @@ function initNavigation() {
 }
 
 function initTypedText() {
-  const titles = ['Full Stack Developer', 'AI Video Creator', 'System Architect', 'UI/UX Enthusiast', 'Tech Innovator'];
+  const titles = ['Full Stack AI Web Developer', 'AI Consultant', 'AI Video Creator', 'System Architect', 'UI/UX Enthusiast', 'Tech Innovator'];
   const el = document.getElementById('typed-text');
   let idx = 0, charIdx = 0, isDeleting = false;
   function type() {

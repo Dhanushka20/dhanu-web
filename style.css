@@ -608,6 +608,56 @@ section { padding: 100px 24px; }
 .service-img-wrapper:hover .service-img {
   transform: scale(1.03);
 }
+.consult-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 24px;
+  padding: 24px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-left: 2px solid var(--accent);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+.consult-card:hover {
+  border-color: var(--border-light);
+  border-left-color: var(--accent);
+  box-shadow: 0 10px 40px rgba(0, 217, 255, 0.06);
+}
+.consult-icon {
+  flex: 0 0 48px;
+  width: 48px; height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-size: 18px;
+}
+.consult-body { flex: 1 1 auto; }
+.consult-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.consult-text {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+.consult-text strong { color: var(--text-primary); }
+.consult-actions {
+  flex: 0 0 auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
 /* AI MASTERCLASS */
 #masterclass {
@@ -1847,6 +1897,9 @@ button:hover ~ .cursor-follower {
   }
   .menu-toggle { display: flex; }
   .services-grid { grid-template-columns: 1fr; }
+  .consult-card { flex-direction: column; align-items: flex-start; gap: 16px; padding: 22px; }
+  .consult-actions { width: 100%; }
+  .consult-actions .btn { flex: 1 1 auto; justify-content: center; }
   .mc-card { grid-template-columns: 1fr; gap: 28px; padding: 28px 22px; }
   .mc-actions .btn { flex: 1 1 auto; justify-content: center; }
   .training-grid { grid-template-columns: 1fr; }
