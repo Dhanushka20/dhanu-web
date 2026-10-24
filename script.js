@@ -1,25 +1,26 @@
 const PROJECTS = [
-  { title: 'Randika Methruwan Photography', cat: 'websites', desc: 'Photography portfolio & booking', url: 'https://randikamethruwanphotography.com/', img: 'assets/projects/randika-methruwan-photography.jpg' },
-  { title: 'Shan Tours', cat: 'websites', desc: 'Sri Lanka tours and travels', url: 'https://www.shantourslk.com/', img: 'assets/projects/shan-tours.jpg' },
-  { title: 'Diya Closet', cat: 'websites', desc: 'E-commerce fashion store', url: 'https://diyacloset.com', img: 'assets/projects/diya-closet.jpg' },
-  { title: 'Crysenya Events', cat: 'websites', desc: 'Event management platform', url: 'https://crysenya-events.vercel.app/', img: 'assets/projects/crysenya-events.jpg' },
-  { title: 'Chiran Madushanka Production', cat: 'websites', desc: 'Professional media production showcase', url: 'https://www.chiranmadushankaproduction.com/', img: 'assets/projects/chiran-madushanka-production.jpg' },
-  { title: 'Romance Memories', cat: 'websites', desc: 'Wedding photography & memories platform', url: 'https://romancememories.com/', img: 'assets/projects/romance-memories.jpg' },
-  { title: 'Dhanushka SmartTech', cat: 'websites', desc: 'Tech solutions & services', url: 'https://dhanushka-smarttech.vercel.app/', img: 'assets/projects/dhanushka-smarttech.jpg' },
-  { title: 'Salon Website', cat: 'websites', desc: 'Salon & beauty services booking', url: 'https://v0-salon-website-design-jade.vercel.app/', img: 'assets/projects/salon-website.jpg' },
-  { title: 'Lanka Escapes', cat: 'websites', desc: 'Sri Lanka travel & tours platform', url: 'https://lanka-escapes-theta.vercel.app/', img: 'assets/projects/lanka-escapes.jpg' },
-  { title: 'Ceylon Mystique', cat: 'websites', desc: 'Tourism & cultural travel packages', url: 'https://ceylon-tour.vercel.app/', img: 'assets/projects/ceylon-mystique.jpg' },
-  { title: 'Haven Coast Resort', cat: 'websites', desc: 'Luxury resort & spa', url: 'https://haven-coast.vercel.app/', img: 'assets/projects/haven-coast-resort.jpg' },
-  { title: 'Emerald Collection', cat: 'websites', desc: 'Premium jewelry collection', url: 'https://emerald-collection.vercel.app/', img: 'assets/projects/emerald-collection.jpg' },
-  { title: 'Serenity Crest', cat: 'websites', desc: 'Wellness & spa retreat', url: 'https://serenity-crest.vercel.app/', img: 'assets/projects/serenity-crest.jpg' },
-  { title: 'Evory Bloom', cat: 'websites', desc: 'Floral arrangements & events', url: 'https://evory-bloom.vercel.app/', img: 'assets/projects/evory-bloom.jpg' },
-  { title: 'Barber Shop One', cat: 'websites', desc: 'Classic barbering services', url: 'https://barbarshop-one.vercel.app/', img: 'assets/projects/barber-shop-one.jpg' },
-  { title: 'Barber Shop Two', cat: 'websites', desc: 'Modern grooming services', url: 'https://barbershop-two-nine.vercel.app/', img: 'assets/projects/barber-shop-two.jpg' },
-  { title: 'Barber Shop Three', cat: 'websites', desc: 'Premium barber experience', url: 'https://barbershop-three-blue.vercel.app/', img: 'assets/projects/barber-shop-three.jpg' },
-  { title: 'DJ One', cat: 'websites', desc: 'DJ & entertainment services', url: 'https://dj-one-tan.vercel.app/', img: 'assets/projects/dj-one.jpg' },
-  { title: 'Artisan Cakes', cat: 'websites', desc: 'Bakery & custom cakes', url: 'https://cakes-flax.vercel.app/', img: 'assets/projects/artisan-cakes.jpg' },
-  { title: 'Fresh Juice Bar', cat: 'websites', desc: 'Juice bar & smoothies', url: 'https://juice-bar-mu.vercel.app/', img: 'assets/projects/fresh-juice-bar.jpg' },
-  { title: 'Weather App', cat: 'websites', desc: 'Real-time weather forecast', url: 'https://weather-app-mocha-ten-90.vercel.app/', img: 'assets/projects/weather-app.jpg' },
+  { title: 'StudioPro.LK', cat: 'saas', type: 'SaaS', icon: 'fa-rocket', featured: true, desc: 'Studio management SaaS — quotations, invoices, calendar & deliverables', url: 'https://studiopro.lk', img: 'assets/projects/studiopro.jpg' },
+  { title: 'Randika Methruwan Photography', cat: 'websites', desc: 'Photography portfolio & booking', url: 'https://randikamethruwanphotography.com/' },
+  { title: 'Shan Tours', cat: 'websites', desc: 'Sri Lanka tours and travels', url: 'https://www.shantourslk.com/' },
+  { title: 'Diya Closet', cat: 'websites', desc: 'E-commerce fashion store', url: 'https://diyacloset.com' },
+  { title: 'Crysenya Events', cat: 'websites', desc: 'Event management platform', url: 'https://crysenya-events.vercel.app/' },
+  { title: 'Chiran Madushanka Production', cat: 'websites', desc: 'Professional media production showcase', url: 'https://www.chiranmadushankaproduction.com/' },
+  { title: 'Romance Memories', cat: 'websites', desc: 'Wedding photography & memories platform', url: 'https://romancememories.com/' },
+  { title: 'Dhanushka SmartTech', cat: 'websites', desc: 'Tech solutions & services', url: 'https://dhanushka-smarttech.vercel.app/' },
+  { title: 'Salon Website', cat: 'websites', desc: 'Salon & beauty services booking', url: 'https://v0-salon-website-design-jade.vercel.app/' },
+  { title: 'Lanka Escapes', cat: 'websites', desc: 'Sri Lanka travel & tours platform', url: 'https://lanka-escapes-theta.vercel.app/' },
+  { title: 'Ceylon Mystique', cat: 'websites', desc: 'Tourism & cultural travel packages', url: 'https://ceylon-tour.vercel.app/' },
+  { title: 'Haven Coast Resort', cat: 'websites', desc: 'Luxury resort & spa', url: 'https://haven-coast.vercel.app/' },
+  { title: 'Emerald Collection', cat: 'websites', desc: 'Premium jewelry collection', url: 'https://emerald-collection.vercel.app/' },
+  { title: 'Serenity Crest', cat: 'websites', desc: 'Wellness & spa retreat', url: 'https://serenity-crest.vercel.app/' },
+  { title: 'Evory Bloom', cat: 'websites', desc: 'Floral arrangements & events', url: 'https://evory-bloom.vercel.app/' },
+  { title: 'Barber Shop One', cat: 'websites', desc: 'Classic barbering services', url: 'https://barbarshop-one.vercel.app/' },
+  { title: 'Barber Shop Two', cat: 'websites', desc: 'Modern grooming services', url: 'https://barbershop-two-nine.vercel.app/' },
+  { title: 'Barber Shop Three', cat: 'websites', desc: 'Premium barber experience', url: 'https://barbershop-three-blue.vercel.app/' },
+  { title: 'DJ One', cat: 'websites', desc: 'DJ & entertainment services', url: 'https://dj-one-tan.vercel.app/' },
+  { title: 'Artisan Cakes', cat: 'websites', desc: 'Bakery & custom cakes', url: 'https://cakes-flax.vercel.app/' },
+  { title: 'Fresh Juice Bar', cat: 'websites', desc: 'Juice bar & smoothies', url: 'https://juice-bar-mu.vercel.app/' },
+  { title: 'Weather App', cat: 'websites', desc: 'Real-time weather forecast', url: 'https://weather-app-mocha-ten-90.vercel.app/' },
   { title: 'AI Cinematic Visuals', cat: 'ai-videos', desc: 'High-quality cinematic AI generation with realistic lighting', video: 'lmw84az5fPw' },
   { title: 'AI Vertical Masterpiece', cat: 'ai-videos', desc: '9:16 aspect ratio AI video production', video: 'TYVWIOtTUnk' },
   { title: 'AI Digital Avatar & Voice', cat: 'ai-videos', desc: 'Accurate face reference and digital costume rendering', video: 'uaIGsRAm1es' },
@@ -175,17 +176,18 @@ function initProjects() {
 
     grid.innerHTML = filtered.map((p, idx) => {
       const isVideo = !!p.video;
-      const icon = isVideo ? 'fa-video' : 'fa-globe';
+      const icon = p.icon || (isVideo ? 'fa-video' : 'fa-globe');
+      const typeLabel = p.type || (isVideo ? 'Video' : 'Website');
       const vid = p.video || '';
       const img = isVideo
         ? `https://img.youtube.com/vi/${vid}/hqdefault.jpg`
-        : (p.url ? `https://s0.wp.com/mshots/v1/${encodeURIComponent(p.url)}?w=800&h=600` : `https://placehold.co/800x600/161b22/8b949e?text=${encodeURIComponent(p.title)}`);
+        : (p.img || (p.url ? `https://s0.wp.com/mshots/v1/${encodeURIComponent(p.url)}?w=800&h=600` : `https://placehold.co/800x600/161b22/8b949e?text=${encodeURIComponent(p.title)}`));
       return `
         <div class="swiper-slide">
-          <div class="project-card" data-video="${vid}" data-url="${p.url || ''}" data-isvideo="${isVideo}">
+          <div class="project-card${p.featured ? ' project-featured' : ''}" data-video="${vid}" data-url="${p.url || ''}" data-isvideo="${isVideo}">
             <img src="${img}" alt="${p.title}" class="project-thumb" loading="lazy" onerror="this.src='https://placehold.co/400x200/161b22/8b949e?text=${encodeURIComponent(p.title)}'" />
             <div class="project-body">
-              <div class="project-type"><i class="fas ${icon}"></i> ${isVideo ? 'Video' : 'Website'}</div>
+              <div class="project-type"><i class="fas ${icon}"></i> ${typeLabel}</div>
               <h3 class="project-title">${p.title}</h3>
               <p class="project-desc">${p.desc}</p>
             </div>
