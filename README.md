@@ -27,7 +27,11 @@ Terminal/developer-themed portfolio site built with vanilla HTML, CSS & JavaScri
 
 ## Sections
 
-Hero → Services → Projects → About → AI Workshops → **Certificates** → Contact
+Hero → Services → **AI Masterclass** → Projects → About → AI Workshops → Certificates → Contact
+
+**AI Masterclass**: free sessions & live classes, promoted in the hero CTA, the
+`#masterclass` section, the AI Consultations service tile and the footer — all
+pointing to the WhatsApp community group.
 
 Certificates are Google (Coursera) AI courses, shown as a grid with a
 keyboard-navigable lightbox (`←` / `→` / `Esc`) and a Coursera verify link.
