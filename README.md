@@ -19,9 +19,18 @@ Terminal/developer-themed portfolio site built with vanilla HTML, CSS & JavaScri
 ├── style.css
 ├── script.js
 ├── assets/
+│   ├── certificates/   # compressed AI certificates (+ thumbnails)
+│   ├── session/        # AI workshop photos
 │   └── dhanu.png
 └── README.md
 ```
+
+## Sections
+
+Hero → Services → Projects → About → AI Workshops → **Certificates** → Contact
+
+Certificates are Google (Coursera) AI courses, shown as a grid with a
+keyboard-navigable lightbox (`←` / `→` / `Esc`) and a Coursera verify link.
 
 ## Usage
 

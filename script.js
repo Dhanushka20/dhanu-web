@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCursorFollower();
   initSmoothScroll();
   initTrainingGallery();
+  initCertificates();
 });
 
 function initPreloader() {
@@ -294,9 +295,77 @@ function initScrollAnimations() {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.service-card, .project-card, .timeline-content, .contact-card').forEach(el => {
+  document.querySelectorAll('.service-card, .project-card, .timeline-content, .contact-card, .cert-card').forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);
+  });
+}
+
+function initCertificates() {
+  const cards = Array.from(document.querySelectorAll('.cert-card'));
+  if (!cards.length) return;
+
+  const certs = cards.map(card => ({
+    full: card.dataset.full,
+    title: card.dataset.title,
+    meta: card.dataset.meta,
+  }));
+
+  const lightbox = document.createElement('div');
+  lightbox.id = 'certLightbox';
+  lightbox.className = 'gallery-lightbox';
+  lightbox.innerHTML = `
+    <div class="gallery-overlay" onclick="closeCertModal()"></div>
+    <div class="gallery-modal">
+      <div class="cert-caption" id="certCaption"></div>
+      <button class="gallery-nav gallery-prev" onclick="changeCert(-1)"><i class="fas fa-chevron-left"></i></button>
+      <img id="certFullImg" src="" alt="" />
+      <button class="gallery-nav gallery-next" onclick="changeCert(1)"><i class="fas fa-chevron-right"></i></button>
+      <button class="gallery-close" onclick="closeCertModal()"><i class="fas fa-times"></i></button>
+      <div class="gallery-counter" id="certCounter"></div>
+    </div>`;
+  document.body.appendChild(lightbox);
+
+  window.certIdx = 0;
+  window.openCertModal = (idx) => {
+    window.certIdx = idx;
+    const cert = certs[idx];
+    const img = document.getElementById('certFullImg');
+    img.src = cert.full;
+    img.alt = `${cert.title} certificate`;
+    document.getElementById('certCaption').innerHTML = `<span class="accent">$</span> ${cert.title} <span class="cert-dot">//</span> ${cert.meta}`;
+    document.getElementById('certCounter').textContent = `${idx + 1} / ${certs.length}`;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+  window.closeCertModal = () => {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+  window.changeCert = (dir) => {
+    let next = window.certIdx + dir;
+    if (next < 0) next = certs.length - 1;
+    if (next >= certs.length) next = 0;
+    window.openCertModal(next);
+  };
+
+  cards.forEach((card, i) => {
+    const media = card.querySelector('.cert-media');
+    if (!media) return;
+    media.addEventListener('click', () => window.openCertModal(i));
+    media.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        window.openCertModal(i);
+      }
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') window.closeCertModal();
+    if (e.key === 'ArrowLeft') window.changeCert(-1);
+    if (e.key === 'ArrowRight') window.changeCert(1);
   });
 }
 
