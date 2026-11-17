@@ -230,6 +230,10 @@ body {
   align-items: center;
   width: 100%;
 }
+.hero-left,
+.hero-right {
+  min-width: 0;
+}
 .hero-tag {
   display: inline-flex;
   align-items: center;
@@ -350,6 +354,7 @@ body {
 }
 .hero-social {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 36px;
 }
@@ -652,6 +657,62 @@ section { padding: 100px 24px; }
   color: var(--text-secondary);
 }
 .consult-text strong { color: var(--text-primary); }
+.consult-call {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-top: 14px;
+}
+.consult-call-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.consult-call-label .prompt { color: var(--green); margin-right: 4px; }
+.consult-phone,
+.consult-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.consult-phone {
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid rgba(0, 217, 255, 0.45);
+}
+.consult-phone:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg-primary);
+  box-shadow: 0 0 24px var(--accent-glow);
+  transform: translateY(-2px);
+}
+.consult-wa {
+  color: #25d366;
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.45);
+}
+.consult-wa:hover {
+  background: #25d366;
+  border-color: #25d366;
+  color: #06220f;
+  box-shadow: 0 0 24px rgba(37, 211, 102, 0.35);
+  transform: translateY(-2px);
+}
+.consult-phone i,
+.consult-wa i { font-size: 13px; }
 .consult-actions {
   flex: 0 0 auto;
   display: flex;
@@ -1898,6 +1959,7 @@ button:hover ~ .cursor-follower {
   .menu-toggle { display: flex; }
   .services-grid { grid-template-columns: 1fr; }
   .consult-card { flex-direction: column; align-items: flex-start; gap: 16px; padding: 22px; }
+  .consult-call { margin-top: 12px; }
   .consult-actions { width: 100%; }
   .consult-actions .btn { flex: 1 1 auto; justify-content: center; }
   .mc-card { grid-template-columns: 1fr; gap: 28px; padding: 28px 22px; }
@@ -1917,6 +1979,15 @@ button:hover ~ .cursor-follower {
 
 @media (max-width: 480px) {
   .hero-name { font-size: 32px; }
+  .consult-call { gap: 8px; }
+  .consult-phone,
+  .consult-wa { font-size: 12px; padding: 6px 10px; }
+  .hero-social { gap: clamp(4px, 2vw, 10px); }
+  .hero-social .social-link {
+    width: clamp(28px, 8.4vw, 34px);
+    height: clamp(28px, 8.4vw, 34px);
+    font-size: 14px;
+  }
   .hero-stats { gap: 16px; flex-wrap: wrap; }
   .stat-num, .stat-plus { font-size: 24px; }
   .section-terminal { transform: scale(0.85); }
